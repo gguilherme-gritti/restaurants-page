@@ -64,6 +64,13 @@ const theme = {
     lg: "16px",
     xl: "32px",
   },
+  media: {
+    mobile: "(max-width: 520px)",
+    tablet: "(max-width: 768px)",
+    desktop: "(max-width: 992px)",
+    fullscreen: "(max-width: 1200px)",
+    ultrawide: "(max-width: 1400px)",
+  },
 };
 
 export default theme;

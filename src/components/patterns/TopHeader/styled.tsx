@@ -4,7 +4,6 @@ import { theme } from "../../../styles";
 export const Container = styled.div`
   height: 400px;
   width: 100%;
-  /* position: fixed; */
   top: 0;
   left: 0;
 
@@ -13,6 +12,15 @@ export const Container = styled.div`
   background: url(${(props) => props.srcBackground}) no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 950px) {
+    padding: 30px 150px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 30px;
+    height: 200px;
+  }
 `;
 
 export const Header = styled.header`
@@ -32,6 +40,10 @@ export const Logo = styled.div`
   img {
     margin-top: ${(props) => props.theme.spacing["1"]};
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const InputArea = styled.div`
@@ -39,10 +51,22 @@ export const InputArea = styled.div`
 
   display: flex;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Search = styled.div`
   margin-top: ${(props) => props.theme.sizes["32"]};
 
   width: 50%;
+
+  @media (max-width: 950px) {
+    width: 65%;
+  }
+
+  @media (max-width: 768px) {
+    width: 85%;
+  }
 `;

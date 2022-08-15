@@ -5,7 +5,7 @@ export const Card = styled.div`
   height: 170px;
 
   display: flex;
-  flex: 1 1 350px;
+  flex: 1 1 42%;
   align-items: flex-end;
 
   padding: ${(props) => props.theme.spacing["2"]};
@@ -21,6 +21,10 @@ export const Card = styled.div`
     cursor: pointer;
     transform: scale(1.02);
     box-shadow: 2px 2px 2px ${(props) => props.theme.palette.primary};
+  }
+
+  @media (max-width: 767px) {
+    flex: 1 1 38%;
   }
 `;
 

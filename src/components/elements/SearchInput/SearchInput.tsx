@@ -4,9 +4,6 @@ import Image from "next/image";
 import { Container, Icon, Input } from "./styled";
 import Search from "../../../assets/icons/search.png";
 import TextContext from "../../../contexts/TextContext";
-import { getRestaurantsData } from "../../../repositories/restaurant";
-import { RestaurantData } from "../../../repositories/types";
-import { useQuery } from "react-query";
 
 export const SearchInput = () => {
   const { setState, state } = useContext(TextContext);

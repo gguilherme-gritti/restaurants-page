@@ -60,7 +60,7 @@ export const Content = styled.div`
 `;
 
 export const Main = styled.div`
-  width: 50%;
+  width: 60%;
   height: 75%;
 
   display: flex;

@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const PageContent = styled.div`
-  width: 50%;
+  width: 60%;
 
   margin-top: ${(props) => props.theme.spacing["3"]};
 `;
