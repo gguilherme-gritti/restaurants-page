@@ -1,6 +1,4 @@
-import { useRouter } from "next/router";
-import { ParsedUrlQuery } from "querystring";
-import { useEffect } from "react";
+import { MaskPhone } from "../../../utils/MaskPhone";
 import { RestaurantDescription, RestaurantHeader } from "../../patterns";
 import { RestaurantDetailProps } from "./types";
 
@@ -20,7 +18,7 @@ export const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
         openingHours={restaurant?.opening_hours}
         paymentMethods={restaurant?.payment_methods}
         title={restaurant?.name}
-        phone={restaurant?.telephone}
+        phone={MaskPhone(restaurant?.telephone)}
         site={restaurant?.website}
       />
     </>

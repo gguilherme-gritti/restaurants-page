@@ -18,6 +18,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import TextContext from "../../../contexts/TextContext";
 import { useContext } from "react";
+import { MaskPhone } from "../../../utils/MaskPhone";
 
 export const RestaurantHeader = ({
   restaurantBg,
@@ -53,7 +54,7 @@ export const RestaurantHeader = ({
           <RestaurantInfo>
             <Description>
               <h1>{title}</h1>
-              <p>{phone}</p>
+              <p>{MaskPhone(phone)}</p>
               <p>{site}</p>
             </Description>
           </RestaurantInfo>
