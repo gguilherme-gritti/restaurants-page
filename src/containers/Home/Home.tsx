@@ -1,9 +1,9 @@
-import { List, TopHeader } from "../../components";
+import { List, ScreenContentText, TopHeader } from "../../components";
 import { getRestaurantsData } from "../../repositories/restaurant";
 
 import { useQuery } from "react-query";
 import { RestaurantData } from "../../repositories/types";
-import { ListArea, PageContent } from "./styled";
+import { ListArea, Container, PageContent } from "./styled";
 
 export const Home = () => {
   const { data, isFetching } = useQuery("restaurants", async () => {
@@ -18,11 +18,16 @@ export const Home = () => {
       {isFetching ? (
         <label>Carregando... </label>
       ) : (
-        <PageContent>
-          <ListArea>
-            <List restaurants={data} />
-          </ListArea>
-        </PageContent>
+        <>
+          <Container>
+            <PageContent>
+              <ScreenContentText />
+              <ListArea>
+                <List restaurants={data} />
+              </ListArea>
+            </PageContent>
+          </Container>
+        </>
       )}
     </>
   );
