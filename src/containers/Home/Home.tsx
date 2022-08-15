@@ -6,7 +6,7 @@ import { RestaurantData } from "../../repositories/types";
 import { ListArea, Container, PageContent } from "./styled";
 
 export const Home = () => {
-  const { data, isFetching } = useQuery(
+  const { data, isLoading } = useQuery(
     "restaurants",
     async () => {
       const response = await getRestaurantsData();
@@ -21,7 +21,7 @@ export const Home = () => {
   return (
     <>
       <TopHeader />
-      {isFetching ? (
+      {isLoading ? (
         <label>Carregando... </label>
       ) : (
         <>
