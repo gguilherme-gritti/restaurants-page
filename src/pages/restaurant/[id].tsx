@@ -5,6 +5,7 @@ import { env } from "../../envrionments";
 import { useRouter } from "next/router";
 
 import { useQuery } from "react-query";
+import { Loading } from "../../components";
 
 const Restaurant: NextPage = () => {
   const { query } = useRouter();
@@ -17,13 +18,7 @@ const Restaurant: NextPage = () => {
   });
 
   return (
-    <>
-      {isLoading ? (
-        <p>Carregando...</p>
-      ) : (
-        <RestaurantDetail restaurant={data} />
-      )}
-    </>
+    <>{isLoading ? <Loading /> : <RestaurantDetail restaurant={data} />}</>
   );
 };
 

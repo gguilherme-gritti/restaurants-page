@@ -1,5 +1,6 @@
 import {
   List,
+  Loading,
   ScreenContentText,
   SearchInput,
   TopHeader,
@@ -30,7 +31,7 @@ export const Home = () => {
     <>
       <TopHeader />
       {isLoading ? (
-        <label>Carregando... </label>
+        <Loading />
       ) : (
         <>
           <Container>
