@@ -27,5 +27,5 @@ export const Card = styled.div`
 export const TextBottom = styled.label`
   font-weight: 700;
   font-size: ${(props) => props.theme.fontSizes.sm};
-  color: ${(props) => props.theme.palette.white}; ;
+  color: ${(props) => props.theme.palette.white};
 `;
