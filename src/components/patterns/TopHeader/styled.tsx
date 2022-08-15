@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../../styles";
 
 export const Container = styled.div`
-  height: 400px;
+  height: 350px;
   width: 100%;
   top: 0;
   left: 0;
@@ -18,7 +18,6 @@ export const Container = styled.div`
   }
 
   @media (max-width: 768px) {
-    position: static;
     padding: 30px 30px;
     height: 250px;
   }
@@ -59,7 +58,7 @@ export const InputArea = styled.div`
 `;
 
 export const Search = styled.div`
-  margin-top: ${(props) => props.theme.sizes["32"]};
+  margin-top: ${(props) => props.theme.sizes["20"]};
 
   width: 50%;
 

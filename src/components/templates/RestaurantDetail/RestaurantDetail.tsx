@@ -19,6 +19,9 @@ export const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
         priceRange={restaurant?.price_range}
         openingHours={restaurant?.opening_hours}
         paymentMethods={restaurant?.payment_methods}
+        title={restaurant?.name}
+        phone={restaurant?.telephone}
+        site={restaurant?.website}
       />
     </>
   );

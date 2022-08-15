@@ -33,18 +33,16 @@ export const RestaurantHeader = ({
   return (
     <Container restaurantBg={restaurantBg}>
       <Header>
-        <ButtonArea>
+        <ButtonArea
+          onClick={async () => {
+            setState("");
+            await push("/");
+          }}
+        >
           <ButtonImg>
             <Image src={ArrowLeft} alt="Icone Botão voltar" />
           </ButtonImg>
-          <Button
-            onClick={async () => {
-              setState("");
-              await push("/");
-            }}
-          >
-            Voltar
-          </Button>
+          <Button>Voltar</Button>
         </ButtonArea>
       </Header>
       <Content>

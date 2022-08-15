@@ -5,9 +5,6 @@ export const Container = styled.div`
   height: 300px;
   width: 100%;
 
-  top: 0;
-  left: 0;
-
   padding: 30px 200px;
 
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -15,6 +12,13 @@ export const Container = styled.div`
 
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 768px) {
+    margin: 0px;
+    height: 200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 export const Header = styled.header`
@@ -36,6 +40,10 @@ export const ButtonImg = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
 `;
 
 export const Button = styled.button`
@@ -48,6 +56,10 @@ export const Button = styled.button`
 
   font-size: ${(props) => props.theme.fontSizes.md};
   font-weight: 700;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Content = styled.div`
@@ -72,6 +84,10 @@ export const RestaurantAreaLogo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const RestaurantLogo = styled.div`
@@ -86,6 +102,10 @@ export const RestaurantLogo = styled.div`
   background-position: center;
 
   border-radius: 100%;
+
+  @media (max-width: 768px) {
+    border: 2px solid #fff;
+  }
 `;
 
 export const RestaurantInfo = styled.div`
@@ -95,6 +115,10 @@ export const RestaurantInfo = styled.div`
 
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Description = styled.div`

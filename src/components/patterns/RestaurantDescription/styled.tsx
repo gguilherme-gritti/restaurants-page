@@ -9,7 +9,14 @@ export const Container = styled.div`
 
   justify-content: center;
 
+  background-color: ${(props) => props.theme.palette.white};
+
   margin-top: ${(props) => props.theme.spacing["3"]};
+
+  @media (max-width: 768px) {
+    margin-top: -30px;
+    border-radius: 32px;
+  }
 `;
 
 export const Content = styled.div`
@@ -28,6 +35,11 @@ export const Content = styled.div`
     font-size: ${(props) => props.theme.fontSizes["1"]};
     margin-bottom: ${(props) => props.theme.spacing["6"]};
   }
+
+  @media (max-width: 768px) {
+    width: 85%;
+    margin-top: ${(props) => props.theme.spacing["6"]};
+  }
 `;
 
 export const Description = styled.h2`
@@ -35,6 +47,10 @@ export const Description = styled.h2`
   font-weight: 400;
 
   margin-bottom: ${(props) => props.theme.spacing["6"]};
+
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.theme.fontSizes["lg"]};
+  }
 `;
 
 export const Divider = styled.div`
@@ -44,4 +60,31 @@ export const Divider = styled.div`
   background-color: ${(props) => props.theme.palette.light};
 
   margin-bottom: ${(props) => props.theme.spacing["6"]};
+`;
+
+export const WrapperTitle = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: ${(props) => props.theme.spacing["10"]};
+    margin-bottom: ${(props) => props.theme.spacing["5"]};
+  }
+`;
+
+export const WrapperContact = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+
+    p {
+      margin-bottom: ${(props) => props.theme.spacing["1"]};
+    }
+
+    margin-bottom: ${(props) => props.theme.spacing["5"]};
+  }
 `;

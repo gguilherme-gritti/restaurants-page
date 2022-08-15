@@ -20,7 +20,6 @@ export const Card = styled.div`
   &:hover {
     cursor: pointer;
     transform: scale(1.02);
-    box-shadow: 2px 2px 2px ${(props) => props.theme.palette.primary};
   }
 
   @media (max-width: 767px) {
