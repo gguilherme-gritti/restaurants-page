@@ -44,5 +44,5 @@ export const InputArea = styled.div`
 export const Search = styled.div`
   margin-top: ${(props) => props.theme.sizes["32"]};
 
-  width: 60%;
+  width: 50%;
 `;

@@ -6,11 +6,17 @@ import { RestaurantData } from "../../repositories/types";
 import { ListArea, Container, PageContent } from "./styled";
 
 export const Home = () => {
-  const { data, isFetching } = useQuery("restaurants", async () => {
-    const response = await getRestaurantsData();
+  const { data, isFetching } = useQuery(
+    "restaurants",
+    async () => {
+      const response = await getRestaurantsData();
 
-    return response as RestaurantData[];
-  });
+      return response as RestaurantData[];
+    },
+    {
+      staleTime: 1000 * 60, //1 minute
+    }
+  );
 
   return (
     <>
