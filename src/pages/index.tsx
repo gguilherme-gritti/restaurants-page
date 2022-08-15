@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
+import { SearchInput } from "../components";
 
 const Home: NextPage = () => {
-  return <h1>Hello World</h1>;
+  return <SearchInput />;
 };
 
 export default Home;
