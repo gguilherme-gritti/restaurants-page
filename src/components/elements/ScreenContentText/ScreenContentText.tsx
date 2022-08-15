@@ -3,7 +3,7 @@ import TextContext from "../../../contexts/TextContext";
 import { Container, TextResultArea } from "./styled";
 
 export const ScreenContentText = () => {
-  const { setState, state } = useContext(TextContext);
+  const { state } = useContext(TextContext);
 
   return (
     <Container>
