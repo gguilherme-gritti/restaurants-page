@@ -48,11 +48,7 @@ export const RestaurantHeader = ({
       <Content>
         <Main>
           <RestaurantAreaLogo>
-            <RestaurantLogo
-              restaurantLogo={restaurantLogo}
-              alt="Logotipo"
-              layout="fill"
-            />
+            <RestaurantLogo restaurantLogo={restaurantLogo} />
           </RestaurantAreaLogo>
           <RestaurantInfo>
             <Description>

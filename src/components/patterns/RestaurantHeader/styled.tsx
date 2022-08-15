@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../styles";
 
-export const Container = styled.div`
+export const Container = styled.div<{ restaurantBg: string }>`
   height: 300px;
   width: 100%;
 
@@ -90,7 +90,7 @@ export const RestaurantAreaLogo = styled.div`
   }
 `;
 
-export const RestaurantLogo = styled.div`
+export const RestaurantLogo = styled.div<{ restaurantLogo: string }>`
   max-width: 150px;
   max-height: 150px;
 
