@@ -1,5 +1,5 @@
 import { Container, Header, InputArea, Logo, Search } from "./styled";
-import { ScreenDescription, SearchInput } from "../../elements";
+import { RestaurantCard, ScreenDescription, SearchInput } from "../../elements";
 import Image from "next/image";
 
 import DesktopBackground from "../../../assets/images/desktopBackground.png";

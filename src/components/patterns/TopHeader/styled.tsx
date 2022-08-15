@@ -4,7 +4,7 @@ import { theme } from "../../../styles";
 export const Container = styled.div`
   height: 400px;
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
 
