@@ -10,6 +10,13 @@ export const Container = styled.div`
   h2 {
     margin: ${(props) => props.theme.spacing["3"]};
   }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 18px;
+      margin-bottom: 0px;
+    }
+  }
 `;
 
 export const TextResultArea = styled.div`
@@ -27,5 +34,9 @@ export const TextResultArea = styled.div`
 
   h4 {
     margin-top: ${(props) => props.theme.spacing["1"]};
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;

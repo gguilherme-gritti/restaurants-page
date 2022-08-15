@@ -8,8 +8,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
 
+  background-color: ${(props) => props.theme.palette.white};
+
   @media (max-width: 768px) {
+    border-radius: ${(props) => props.theme.radius["xl"]};
     align-items: center;
+    margin-top: -30px;
   }
 `;
 

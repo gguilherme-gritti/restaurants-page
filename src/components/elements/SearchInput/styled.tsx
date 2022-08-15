@@ -14,6 +14,11 @@ export const Container = styled.div`
 
   border: 1px solid ${(props) => props.theme.palette.lightMedium};
   border-radius: ${(props) => props.theme.radius["md"]};
+
+  @media (max-width: 768px) {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Icon = styled.div`

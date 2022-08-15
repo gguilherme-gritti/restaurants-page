@@ -1,9 +1,15 @@
-import { List, ScreenContentText, TopHeader } from "../../components";
+import {
+  List,
+  ScreenContentText,
+  SearchInput,
+  TopHeader,
+} from "../../components";
 import { getRestaurantsData } from "../../repositories/restaurant";
 
 import { useQuery } from "react-query";
 import { RestaurantData } from "../../repositories/types";
 import { ListArea, Container, PageContent } from "./styled";
+import { useSizeWindow } from "../../utils/SizeWindow";
 
 export const Home = () => {
   const { data, isLoading } = useQuery(
@@ -17,6 +23,8 @@ export const Home = () => {
       staleTime: 1000 * 60, //1 minute
     }
   );
+
+  const { width } = useSizeWindow();
 
   return (
     <>

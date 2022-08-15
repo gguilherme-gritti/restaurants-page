@@ -18,8 +18,9 @@ export const Container = styled.div`
   }
 
   @media (max-width: 768px) {
+    position: static;
     padding: 30px 30px;
-    height: 200px;
+    height: 250px;
   }
 `;
 

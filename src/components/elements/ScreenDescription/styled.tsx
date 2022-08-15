@@ -11,6 +11,10 @@ export const Container = styled.div`
   }
 
   @media (max-width: 768px) {
+    padding-top: 0px;
+    h1 {
+      font-size: 24px;
+    }
     text-align: left;
   }
 `;
@@ -30,6 +34,7 @@ export const Slogan = styled.div`
   }
 
   @media (max-width: 768px) {
+    padding-top: 10px;
     max-width: 100%;
     font-size: ${(props) => props.theme.fontSizes.xs};
     float: none;

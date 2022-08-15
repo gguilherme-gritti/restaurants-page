@@ -14,6 +14,7 @@ const theme = {
     poppins: "Poppins",
   },
   fontSizes: {
+    xxs: "0.5rem",
     xs: "0.625rem",
     sm: "0.75rem",
     md: "0.875rem",
