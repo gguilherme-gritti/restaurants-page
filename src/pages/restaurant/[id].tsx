@@ -10,15 +10,21 @@ import { Loading } from "../../components";
 const Restaurant: NextPage = () => {
   const { query } = useRouter();
 
-  const { data, isLoading } = useQuery(["restaurant", query.id], async () => {
-    const response = await fetch(`${env.RESTAURANT_ENDPOINT}/${query.id}`);
-    const data = await response.json();
+  const { data, isLoading, isError } = useQuery(
+    ["restaurant", query.id],
+    async () => {
+      const response = await fetch(`${env.RESTAURANT_ENDPOINT}/${query.id}`);
+      const data = await response.json();
 
-    return data.data;
-  });
+      return data.data;
+    }
+  );
 
   return (
-    <>{isLoading ? <Loading /> : <RestaurantDetail restaurant={data} />}</>
+    <>
+      {isLoading ? <Loading /> : <RestaurantDetail restaurant={data} />}
+      {isError && <p>Something went wrong :(</p>}
+    </>
   );
 };
 
