@@ -7,8 +7,13 @@ import MobileBackground from "../../../assets/images/mobileBackground.png";
 
 import LogoApp from "../../../assets/images/MeuApp.png";
 import { useSizeWindow } from "../../../utils/SizeWindow";
+import { useContext } from "react";
+import TextContext from "../../../contexts/TextContext";
+import { TextResultArea } from "../../elements/ScreenContentText/styled";
 
 export const TopHeader = () => {
+  const { setState, state } = useContext(TextContext);
+
   const { width } = useSizeWindow();
 
   return (
@@ -21,14 +26,35 @@ export const TopHeader = () => {
         <Logo>
           <Image src={LogoApp} alt="MeuApp logotipo" />
         </Logo>
-        <ScreenDescription
-          title="Descubra novos sabores"
-          slogan="Aqui eu converso com você sobre nossa proposta"
-        />
+        {(width as number) < 768 && !state ? (
+          <ScreenDescription
+            title="Descubra novos sabores"
+            slogan="Aqui eu converso com você sobre nossa proposta"
+          />
+        ) : (width as number) > 768 ? (
+          <ScreenDescription
+            title="Descubra novos sabores"
+            slogan="Aqui eu converso com você sobre nossa proposta"
+          />
+        ) : (
+          <></>
+        )}
+        {(width as number) < 768 && state ? (
+          <TextResultArea>
+            <label>Resultados para</label>
+            <h4>{state}</h4>
+          </TextResultArea>
+        ) : (
+          <></>
+        )}
       </Header>
-      <InputArea>
-        <Search>{(width as number) > 768 ? <SearchInput /> : <></>}</Search>
-      </InputArea>
+      {(width as number) > 768 && (
+        <InputArea>
+          <Search>
+            <SearchInput />
+          </Search>
+        </InputArea>
+      )}
     </Container>
   );
 };

@@ -14,7 +14,7 @@ export const ScreenContentText = () => {
       {(width as number) < 768 ? <SearchInput /> : <></>}
       <Container>
         {state ? <h2>Resultados</h2> : <h2>Restaurantes</h2>}
-        {state ? (
+        {state && (width as number) > 768 ? (
           <TextResultArea>
             <label>Resultados para</label>
             <h4>{state}</h4>
