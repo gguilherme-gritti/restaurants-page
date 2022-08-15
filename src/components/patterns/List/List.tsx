@@ -1,10 +1,16 @@
 import { RestaurantCard } from "../../elements";
+import { ListProps } from "./types";
 
-export const List = () => {
+export const List = ({ restaurants }: ListProps) => {
   return (
-    <RestaurantCard
-      title="gustou"
-      srcBackground="https://loremflickr.com/640/480/cuisine"
-    />
+    <>
+      {restaurants?.map((restaurant) => (
+        <RestaurantCard
+          key={restaurant.id}
+          srcBackground={restaurant.image}
+          title={restaurant.name}
+        />
+      ))}
+    </>
   );
 };
