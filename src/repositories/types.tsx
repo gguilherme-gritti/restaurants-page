@@ -1,7 +1,3 @@
-export type GetRestaurantPropData = {
-  id: string;
-};
-
 export type RestaurantData = {
   id: string;
   name: string;
