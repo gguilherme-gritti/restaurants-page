@@ -14,8 +14,8 @@ import {
 import { RestaurantHeaderProps } from "./types";
 
 import ArrowLeft from "../../../assets/icons/arrowLeft.png";
-
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export const RestaurantHeader = ({
   restaurantBg,
@@ -24,6 +24,8 @@ export const RestaurantHeader = ({
   phone,
   site,
 }: RestaurantHeaderProps) => {
+  const { push } = useRouter();
+
   return (
     <Container restaurantBg={restaurantBg}>
       <Header>
@@ -31,7 +33,7 @@ export const RestaurantHeader = ({
           <ButtonImg>
             <Image src={ArrowLeft} alt="Icone Botão voltar" />
           </ButtonImg>
-          <Button>Voltar</Button>
+          <Button onClick={async () => await push("/")}>Voltar</Button>
         </ButtonArea>
       </Header>
       <Content>

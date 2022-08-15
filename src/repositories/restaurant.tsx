@@ -14,5 +14,5 @@ export const getRestaurantData = async ({ id }: GetRestaurantPropData) => {
 
   const data = await response.json();
 
-  return data;
+  return data.data as RestaurantData;
 };

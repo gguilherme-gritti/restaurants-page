@@ -7,6 +7,7 @@ export const List = ({ restaurants }: ListProps) => {
       {restaurants?.map((restaurant) => (
         <RestaurantCard
           key={restaurant.id}
+          id={restaurant.id}
           srcBackground={restaurant.image}
           title={restaurant.name}
         />
