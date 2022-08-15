@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Image from "next/image";
 
 import { Container, Icon, Input } from "./styled";
 import Search from "../../../assets/icons/search.png";
+import TextContext from "../../../contexts/TextContext";
 
 export const SearchInput = () => {
-  const [value, setValue] = useState("");
+  const { setState, state } = useContext(TextContext);
 
   return (
     <Container>
@@ -14,8 +15,8 @@ export const SearchInput = () => {
       </Icon>
       <Input
         placeholder="Encontre um restaurante"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={state}
+        onChange={(e) => setState(e.target.value)}
       />
     </Container>
   );

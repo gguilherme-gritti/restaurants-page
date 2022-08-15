@@ -6,12 +6,15 @@ import { queryClient } from "../services/queryClient";
 
 import "../styles/_imports.css";
 import { GlobalStyle, theme } from "../styles";
+import GlobalContext from "../contexts/GlobalContext";
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <GlobalContext>
+          <Component {...pageProps} />
+        </GlobalContext>
       </QueryClientProvider>
       <GlobalStyle />
     </ThemeProvider>
