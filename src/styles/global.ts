@@ -7,7 +7,7 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
 
-    body, input, button{
+    body, input, label, button{
         font: 500 0.875rem Poppins, sans-serif;
     }  
 

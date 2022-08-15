@@ -1,8 +1,16 @@
 import type { NextPage } from "next";
-import { SearchInput } from "../components";
+import { ScreenDescription, SearchInput } from "../components";
 
 const Home: NextPage = () => {
-  return <SearchInput />;
+  return (
+    <>
+      <SearchInput />
+      <ScreenDescription
+        title="Descubra novos sabores"
+        slogan="Aqui eu converso com você sobre nossa proposta"
+      />
+    </>
+  );
 };
 
 export default Home;
