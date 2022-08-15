@@ -11,22 +11,6 @@ import { useQuery } from "react-query";
 export const SearchInput = () => {
   const { setState, state } = useContext(TextContext);
 
-  // const { data, isLoading } = useQuery(
-  //   "restaurants",
-  //   async () => {
-  //     const response = await getRestaurantsData();
-
-  //     console.log(response.filter((restaurant) => restaurant.name === state));
-
-  //     return response.filter(
-  //       (restaurant) => restaurant.name === state
-  //     ) as RestaurantData[];
-  //   },
-  //   {
-  //     staleTime: 1000 * 60, //1 minute
-  //   }
-  // );
-
   return (
     <Container>
       <Icon>
