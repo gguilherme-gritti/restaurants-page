@@ -16,6 +16,8 @@ import { RestaurantHeaderProps } from "./types";
 import ArrowLeft from "../../../assets/icons/arrowLeft.png";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import TextContext from "../../../contexts/TextContext";
+import { useContext } from "react";
 
 export const RestaurantHeader = ({
   restaurantBg,
@@ -26,6 +28,8 @@ export const RestaurantHeader = ({
 }: RestaurantHeaderProps) => {
   const { push } = useRouter();
 
+  const { setState } = useContext(TextContext);
+
   return (
     <Container restaurantBg={restaurantBg}>
       <Header>
@@ -33,7 +37,14 @@ export const RestaurantHeader = ({
           <ButtonImg>
             <Image src={ArrowLeft} alt="Icone Botão voltar" />
           </ButtonImg>
-          <Button onClick={async () => await push("/")}>Voltar</Button>
+          <Button
+            onClick={async () => {
+              setState("");
+              await push("/");
+            }}
+          >
+            Voltar
+          </Button>
         </ButtonArea>
       </Header>
       <Content>
