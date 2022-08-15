@@ -1,31 +1,9 @@
-import type { GetServerSideProps, NextPage } from "next";
-import { List, RestaurantCard, TopHeader } from "../components";
-import { getRestaurantsData } from "../repositories/restaurant";
+import type { NextPage } from "next";
 
-import { env } from "../envrionments";
+import { Home } from "../containers";
 
-import { useQuery } from "react-query";
-import { RestaurantData } from "../repositories/types";
-
-const Home: NextPage = () => {
-  const { data, isFetching } = useQuery("restaurants", async () => {
-    const response = await getRestaurantsData();
-
-    return response as RestaurantData[];
-  });
-
-  return (
-    <>
-      <TopHeader />
-      {isFetching ? <label>Carregando... </label> : <List restaurants={data} />}
-    </>
-  );
+const Index: NextPage = () => {
+  return <Home />;
 };
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const result = await getRestaurantsData();
-
-//   return result;
-// };
-
-export default Home;
+export default Index;
