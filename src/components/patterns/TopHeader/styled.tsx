@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { theme } from "../../../styles";
 
-export const Container = styled.div`
+export const Container = styled.div<{ srcBackground: string }>`
   height: 350px;
   width: 100%;
   top: 0;
