@@ -6,18 +6,19 @@ export const Container = styled.div<{ srcBackground: string }>`
   top: 0;
   left: 0;
 
-  padding: 30px 200px;
+  padding: ${(props) => props.theme.spacing["6"]} 200px;
 
   background: url(${(props) => props.srcBackground}) no-repeat;
   background-size: cover;
   background-position: center;
 
   @media (max-width: 950px) {
-    padding: 30px 150px;
+    padding: ${(props) => props.theme.spacing["6"]} 150px;
   }
 
-  @media (max-width: 768px) {
-    padding: 30px 30px;
+  @media (${(props) => props.theme.media["tablet"]}) {
+    padding: ${(props) => props.theme.spacing["6"]}
+      ${(props) => props.theme.spacing["6"]};
     height: 250px;
   }
 `;
@@ -31,7 +32,7 @@ export const Header = styled.header`
 
 export const Logo = styled.div`
   max-width: 100px;
-  max-height: 45px;
+  max-height: ${(props) => props.theme.spacing["6"]};
 
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@ export const Logo = styled.div`
     margin-top: ${(props) => props.theme.spacing["1"]};
   }
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     display: none;
   }
 `;
@@ -51,7 +52,7 @@ export const InputArea = styled.div`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     display: none;
   }
 `;
@@ -65,7 +66,7 @@ export const Search = styled.div`
     width: 65%;
   }
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     width: 85%;
   }
 `;

@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { theme } from "../../../styles";
 
-export const Card = styled.div`
+export const Card = styled.div<{ srcBackground: string }>`
   height: 170px;
 
   display: flex;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../../styles";
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.palette.white};
@@ -15,9 +14,9 @@ export const Container = styled.div`
   border: 1px solid ${(props) => props.theme.palette.lightMedium};
   border-radius: ${(props) => props.theme.radius["md"]};
 
-  @media (max-width: 768px) {
-    margin-top: 15px;
-    margin-bottom: 10px;
+  @media (${(props) => props.theme.media["tablet"]}) {
+    margin-top: ${(props) => props.theme.spacing["3"]};
+    margin-bottom: ${(props) => props.theme.spacing["2"]};
   }
 `;
 

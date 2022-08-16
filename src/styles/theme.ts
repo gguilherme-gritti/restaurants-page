@@ -20,6 +20,7 @@ const theme = {
     md: "0.875rem",
     lg: "1rem",
     xl: "1.125rem",
+    xxl: "1.5rem",
   },
   spacing: {
     "1": "5px",

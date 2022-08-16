@@ -10,10 +10,10 @@ export const Container = styled.div`
     color: ${(props) => props.theme.palette.darkDown};
   }
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     padding-top: 0px;
     h1 {
-      font-size: 24px;
+      font-size: ${(props) => props.theme.fontSizes["xxl"]};
     }
     text-align: left;
   }
@@ -33,8 +33,8 @@ export const Slogan = styled.div`
     font-size: ${(props) => props.theme.fontSizes.sm};
   }
 
-  @media (max-width: 768px) {
-    padding-top: 10px;
+  @media (${(props) => props.theme.media["tablet"]}) {
+    padding-top: ${(props) => props.theme.spacing["2"]};
     max-width: 100%;
     font-size: ${(props) => props.theme.fontSizes.xs};
     float: none;

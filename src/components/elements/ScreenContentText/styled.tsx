@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../../styles";
 
 export const Container = styled.div`
   width: 100%;
@@ -11,7 +10,7 @@ export const Container = styled.div`
     margin: ${(props) => props.theme.spacing["3"]};
   }
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     h2 {
       font-size: 18px;
       margin-bottom: 0px;
@@ -36,10 +35,10 @@ export const TextResultArea = styled.div`
     margin-top: ${(props) => props.theme.spacing["1"]};
   }
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     width: 100%;
     text-align: center;
     margin-right: 0px;
-    margin-top: 25px;
+    margin-top: ${(props) => props.theme.spacing["5"]};
   }
 `;

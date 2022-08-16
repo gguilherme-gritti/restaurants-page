@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../styles";
 
 export const Container = styled.div`
   width: 100%;
@@ -10,10 +9,10 @@ export const Container = styled.div`
 
   background-color: ${(props) => props.theme.palette.white};
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     border-radius: ${(props) => props.theme.radius["xl"]};
     align-items: center;
-    margin-top: -30px;
+    margin-top: -${(props) => props.theme.spacing["6"]};
   }
 `;
 
@@ -22,7 +21,7 @@ export const PageContent = styled.div`
 
   margin-top: ${(props) => props.theme.spacing["3"]};
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     width: 90%;
   }
 `;

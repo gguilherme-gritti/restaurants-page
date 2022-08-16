@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../../styles";
 
 export const Container = styled.div`
   width: 100%;
@@ -13,7 +12,7 @@ export const Container = styled.div`
 
   margin-top: ${(props) => props.theme.spacing["3"]};
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     margin-top: -30px;
     border-radius: 32px;
   }
@@ -36,7 +35,7 @@ export const Content = styled.div`
     margin-bottom: ${(props) => props.theme.spacing["6"]};
   }
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     width: 85%;
     margin-top: ${(props) => props.theme.spacing["6"]};
   }
@@ -48,7 +47,7 @@ export const Description = styled.h2`
 
   margin-bottom: ${(props) => props.theme.spacing["6"]};
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     font-size: ${(props) => props.theme.fontSizes["lg"]};
   }
 `;
@@ -65,7 +64,7 @@ export const Divider = styled.div`
 export const WrapperTitle = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,7 +77,7 @@ export const WrapperTitle = styled.div`
 export const WrapperContact = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     display: block;
 
     p {

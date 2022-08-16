@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../../styles";
 
 export const Container = styled.div<{ restaurantBg: string }>`
   height: 300px;
@@ -13,7 +12,7 @@ export const Container = styled.div<{ restaurantBg: string }>`
   background-size: cover;
   background-position: center;
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     margin: 0px;
     height: 200px;
     padding-left: 0;
@@ -41,7 +40,7 @@ export const ButtonImg = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     margin-top: 50px;
   }
 `;
@@ -57,7 +56,7 @@ export const Button = styled.button`
   font-size: ${(props) => props.theme.fontSizes.md};
   font-weight: 700;
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     display: none;
   }
 `;
@@ -85,7 +84,7 @@ export const RestaurantAreaLogo = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     width: 100%;
   }
 `;
@@ -103,7 +102,7 @@ export const RestaurantLogo = styled.div<{ restaurantLogo: string }>`
 
   border-radius: 100%;
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     border: 2px solid #fff;
   }
 `;
@@ -116,7 +115,7 @@ export const RestaurantInfo = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (${(props) => props.theme.media["tablet"]}) {
     display: none;
   }
 `;
