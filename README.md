@@ -8,7 +8,7 @@
 
 
 # :eyes: Demo Website
-👉  demo: https://link
+
 
  <!-- <img src="https://i.imgur.com/WmbAqTz.gif" alt="Move It" width="600"/> -->
 
@@ -29,6 +29,7 @@ The technologies used in the project:
 Testing application, ContextApi, ReactQuery fetching an public API that returns a list of restaurants, with a UI and Responsive front design
 
 # :construction_worker: How to run
+Require Node 
 ```bash
 # Clone Repository
 $ git clone https://github.com/gguilherme-gritti/restaurants-page.git
