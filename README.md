@@ -9,8 +9,7 @@
 
 # :eyes: Demo Website
 
-
- <!-- <img src="https://i.imgur.com/WmbAqTz.gif" alt="Move It" width="600"/> -->
+ <img src="/gguilherme-gritti/restaurants-page/blob/main/demo/1.png?raw=true" alt="Desktop" width="600"/>
 
 # :computer: Technologies
 The technologies used in the project:
