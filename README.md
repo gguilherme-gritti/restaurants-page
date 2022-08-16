@@ -8,8 +8,9 @@
 
 
 # :eyes: Demo Website
+![1](https://user-images.githubusercontent.com/78884167/184768708-dfc88470-d22f-4f3b-b9cf-120717143f44.png)
+![2](https://user-images.githubusercontent.com/78884167/184768748-3a8ad096-b820-4086-b8b5-a304b1e06d02.png)
 
- <img src="/gguilherme-gritti/restaurants-page/blob/main/demo/1.png?raw=true" alt="Desktop" width="600"/>
 
 # :computer: Technologies
 The technologies used in the project:
